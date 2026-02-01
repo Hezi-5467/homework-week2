@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+        height: 100vh;
+        width: 100vw;
+        background-color:rgb(143, 208, 170);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+.container{
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.jokebear{
+    position: absolute;
+    z-index: 10;
+    width: 250px;
+    height: auto;
+    top:60%;
+    animation: larger 1s linear infinite ;
+}
+
+.jokebear:hover{
+    animation-play-state:paused;
+    
+}
+
+.box{
+    padding-top: 30px;
+    position:absolute;
+    width: 600px;
+    height: 320px;
+    top: 15%;
+    box-shadow: 0px 0px 10px rgba(142, 165, 152, 0.509);
+    text-align: center;
+    /* background-color: rgba(27, 52, 37, 0.587); */
+    background-image: linear-gradient(180deg,rgba(255, 255, 255, 0.635) 50%,rgba(255, 255, 255, 0.605) 80%,rgba(255, 255, 255, 0.064) 100%);
+    /* border: 1.5px solid rgb(56, 123, 37); */
+    border-radius: 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    animation: appear 1s ease forwards;
+}
+.text1{
+    
+    font-size: 40px;
+    color: rgb(57, 100, 22);
+    font-weight: 300;
+    /* font-family:Georgia, 'Times New Roman', Times, serif; */
+    /* text-shadow: 0 0 10px rgb(2, 81, 23); */
+}
+.text2{
+    font-size: 20px;
+    /* font-family: Georgia, 'Times New Roman', Times, serif;; */
+    color: rgb(57, 100, 22);
+    margin-top: 60px;
+    font-weight: 300;
+    /* background-color: #f4ffc7; */
+
+}
+.text3{
+    margin-top: 60px;
+    font-size: 20px;
+    color: rgb(57, 100, 22);
+    font-weight: bold;
+    /* background-color: antiquewhite; */
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+}
+
+@keyframes larger {
+    0%{transform: scale(1);}
+    50%{transform: scale(1.02);}
+    100%{transform: scale(1);}
+}
+
+.grass{
+    width: auto;
+    height: 70%;
+    animation: rotatmove 2s infinite linear;
+}
+.text-grass {
+  width: 100%;
+  margin-top: 30px;
+  height: 60px;
+  /* background-color: aqua; */
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  gap:20px;
+  
+}
+.text{
+    width: 600px;
+    height: 100px;
+    /* background-color: blue; */
+    margin-top: 40px;
+}
+
+@keyframes rotatmove{
+        from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}
+}
+@keyframes appear {
+    from{transform: scale(0.8) translateY(20px);
+         opacity: 0;
+        }    
+    to{transform: scale(1) translateY(0);
+      opacity: 1;}
+    }
+
+.text-grass.t1{
+    opacity: 0;
+    animation: appear 1s ease forwards;
+    animation-delay: 0.5s;
+}
+.text-grass.t2{
+    opacity: 0;
+    animation: appear 1s ease forwards;
+    animation-delay: 1s;
+}
+.text{
+    opacity: 0;
+    animation: appear 1s ease forwards;
+    animation-delay: 1.5s;
+}
