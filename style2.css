@@ -17,7 +17,7 @@ section{
     object-fit: cover;
     position: relative;
     z-index: 1;
-    background-image: url("./图片/长背景图.jpg");
+    background-image: url("./picture/longbk.jpg");
     background-size: cover; 
     background-repeat: no-repeat;
     padding-top: 80px;
